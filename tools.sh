@@ -1,5 +1,7 @@
 #!/bin/bash
 sudo apt-get update
+echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+
 
 ## Docker
 sudo apt-get install -y docker.io
