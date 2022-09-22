@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo apt-get update
 echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+sudo apt install -y dirsearch zaproxy
 
 
 ## Docker
