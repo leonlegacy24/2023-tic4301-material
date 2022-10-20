@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
       cfg.vm.provision :shell, path: "tools.sh"
       cfg.ssh.username = "vagrant"
       cfg.ssh.password = "vagrant"
-      cfg.vm.network :private_network, ip: "192.168.56.11", gateway: "192.168.56.1", dns: "8.8.8.8"
+      cfg.vm.network :private_network, ip: "192.168.33.11", gateway: "192.168.33.1", dns: "8.8.8.8"
       cfg.vm.provider "virtualbox" do |vb, override|
         vb.gui = true
         vb.name = "tic4301-attacker"
@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
       cfg.winrm.basic_auth_only = true
       cfg.winrm.timeout = 1200
       cfg.winrm.retry_limit = 20
-      cfg.vm.network :"private_network", ip: "192.168.56.110", gateway: "192.168.56.1", dns: "8.8.8.8"
+      cfg.vm.network :"private_network", ip: "192.168.33.10", gateway: "192.168.33.1", dns: "8.8.8.8"
       cfg.vm.provider "virtualbox" do |vb, override|
         vb.gui = true
         vb.name = "tic4301-exploit-host"
