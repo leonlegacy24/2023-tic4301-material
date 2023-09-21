@@ -6,6 +6,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "tic4301-attacker" do |cfg|
     cfg.vm.box = "kalilinux/rolling"
     cfg.vm.hostname = "tic4301-attacker"
+    cfg.vm.provision :shell, path: "tools.sh"
+    cfg.vm.provision :shell, path: "web.sh"
     cfg.vm.network :private_network, ip: "192.168.33.11", gateway: "192.168.33.1", dns: "8.8.8.8"
     cfg.vm.provider "virtualbox" do |vb, override|
       vb.gui = true
