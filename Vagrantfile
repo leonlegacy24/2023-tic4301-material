@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     end
   end
   config.vm.define "tic4301-host" do |cfg|
-    cfg.vm.box = "StefanScherer/windows_2016"
+    cfg.vm.box = "detectionlab/win10"
     cfg.vm.hostname = "tic4301-host"
     cfg.vm.communicator = "winrm"
     cfg.winrm.basic_auth_only = true
